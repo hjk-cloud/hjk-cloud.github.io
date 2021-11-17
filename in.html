@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>返校通行证(2分钟内有效)</title>
+    <link rel="stylesheet" href="css/weui.min.css">
+    <script type="text/javascript" src="js/Untitled-1.js" charset="UTF-8"></script>
+</head>
+<body ontouchstart>
+<style type="text/css">
+    .myttpp {
+        border: none;
+    }
+</style>
+<div id="bodyDiv">
+    <p style="text-align:center; background-color: grey;" id="imgBg"><br><img src="images/pass1.png"
+                                                                              width="315px" height="220px"
+                                                                              alt=""><br><font
+            style="font-size:100px"></font>
+    <div id="time" style="text-align:center; background-color: grey;">
+        <script type="text/javascript">
+            var t = new Date();
+            var hour = t.getHours();
+            var minute = t.getMinutes();
+            var second = t.getSeconds();
+            var nowTime = hour + ((minute < 10) ? ":0" : ":") + minute + ((second < 10) ? ":0" : ":") + second;
+            document.write(nowTime);
+            document.getElementById("time").style.fontSize = "80px";
+
+            var colorArr = new Array("maroon", "lime", "teal", "purple", "olive", "grey", "pink", "blue", "red","yellow","aqua","silver");
+            var i = localStorage.color * 1;
+            document.getElementById("imgBg").style.background = colorArr[i];
+            document.getElementById("time").style.background = colorArr[i];
+        </script>
+    </div>
+    </p>
+    <div class="weui-cells__title">学生返校通行证</div>
+    <div class="weui-cells">
+        <div class="weui-cell  weui-cell_example">
+            <div class="weui-cell__hd"><img src="images/person.png" alt=""
+                                            style="width: 20px; margin-right: 16px; display: block;"></div>
+            <div class="weui-cell__bd">
+                <p>学号：
+                    <script>var id = localStorage.myId
+                    document.write(id)</script>
+                </p>
+            </div>
+        </div>
+        <div class="weui-cell  weui-cell_example">
+            <div class="weui-cell__hd"><img src="images/person.png" alt=""
+                                            style="width: 20px; margin-right: 16px; display: block;"></div>
+            <div class="weui-cell__bd">
+                <p>姓名：
+                    <script>var name = localStorage.myName
+                    document.write(name)</script>
+                </p>
+            </div>
+        </div>
+        <div class="weui-cell  weui-cell_example">
+            <div class="weui-cell__hd"><img src="images/person.png" alt=""
+                                            style="width: 20px; margin-right: 16px; display: block;"></div>
+            <div class="weui-cell__bd">
+                <p>学院：信息学院</p>
+            </div>
+        </div>
+        <div class="weui-cell  weui-cell_example">
+            <div class="weui-cell__hd"><img src="images/time.png" alt=""
+                                            style="width: 20px; margin-right: 16px; display: block;"></div>
+            <div class="weui-cell__bd">
+                <p>时间：
+                    <script type="text/javascript">var t = new Date();
+                    var year = t.getFullYear();
+                    var month = t.getMonth() + 1;
+                    var day = t.getDate();
+                    var nowTime = year + "/" + month + "/" + day + " ";
+                    document.write(nowTime);
+                    document.getElementById("time").style.fontSize = "80px";
+
+                    var colorArr = new Array("maroon", "lime", "teal", "purple", "olive", "grey");
+                    var i = localStorage.color * 1;
+                    document.getElementById("imgBg").style.background = colorArr[i];
+                    document.getElementById("time").style.background = colorArr[i];
+                    </script>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <br/>
+    <br/>
+    <div class="weui-footer">
+        <p>版权所有 &copy; 辽宁大学</p>
+    </div>
+</div>
+<script type="text/javascript" src="js/Untitled-1.js"></script>
+</body>
+</html>
