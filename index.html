@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bad man</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body style="height: 600px; background-color: #f8f8f8">
+
+<div class="wrap">
+    <br>
+    <p style="text-align:center"><img src="images/logo.png" alt=""></p>
+    <h1>辽大疫情通测试系统</h1>
+    <div class="input-group">
+        <i class="icon-user fa fa-user"></i>
+        <input type="text" class="form-control" list="id_list" id="myId" placeholder="学号"/>
+        <datalist id="id_list">
+            <option value="40321325" />
+        </datalist>
+
+    </div>
+    <div class="input-group">
+        <i class="icon-user fa fa-user"></i>
+        <input type="text" class="form-control" list="name_list" id="myName" placeholder="姓名">
+        <datalist id="name_list">
+            <option value="黄嘉凯" />
+            <option value="孔祥伟" />
+            <option value="高飞" />
+            <option value="申锦涛" />
+        </datalist>
+    </div>
+    <div class="input-group">
+        <i class="icon-user fa fa-user"></i>
+        <select class="form-control" id="color" >
+            <option value="" selected>选择背景色</option>
+            <option value="0" style="background-color:maroon">0</option>
+            <option value="1" style="background-color:lime">1</option>
+            <option value="2" style="background-color:teal">2</option>
+            <option value="3" style="background-color:purple">3</option>
+            <option value="4" style="background-color:olive">4</option>
+            <option value="5" style="background-color:grey">5</option>
+            <option value="6" style="background-color:pink">6</option>
+            <option value="7" style="background-color:blue">7</option>
+            <option value="8" style="background-color:red">8</option>
+            <option value="9" style="background-color:yellow">9</option>
+            <option value="10" style="background-color:aqua">10</option>
+            <option value="11" style="background-color:silver">11</option>
+        </select>
+    </div>
+    <div class="input-group btn-group">
+        <input class="weui-btn  weui-btn_primary" type="button" value="生成出校通行证" id="out">
+        <script>
+            document.getElementById("out").onclick = function () {
+                if (window.localStorage) {
+                    localStorage.myId = document.getElementById("myId").value;
+                    localStorage.myName = document.getElementById("myName").value;
+                    localStorage.color = document.getElementById("color").value;
+                    location.href = "out.html"
+                } else {
+                    alert("不支持")
+                }
+            }
+        </script>
+    </div>
+    <div class="input-group btn-group">
+        <input class="weui-btn  weui-btn_primary" type="button" value="生成返校通行证" id="in">
+        <script>
+            document.getElementById("in").onclick = function () {
+                if (window.localStorage) {
+                    localStorage.myId = document.getElementById("myId").value;
+                    localStorage.myName = document.getElementById("myName").value;
+                    localStorage.color = document.getElementById("color").value;
+                    location.href = "in.html"
+                } else {
+                    alert("不支持")
+                }
+            }
+        </script>
+    </div>
+    <div>
+        <table width="375px" border="1" align="center">
+            <tr>
+                <th width="45px" bgcolor="maroon">0</th>
+                <th width="45px" bgcolor="lime">1</th>
+                <th width="45px" bgcolor="teal">2</th>
+                <th width="45px" bgcolor="purple">3</th>
+                <th width="45px" bgcolor="olive">4</th>
+                <th width="45px" bgcolor="grey">5</th>
+            </tr>
+            <tr>
+                <th width="45px" bgcolor="pink">6</th>
+                <th width="45px" bgcolor="blue">7</th>
+                <th width="45px" bgcolor="red">8</th>
+                <th width="45px" bgcolor="yellow">9</th>
+                <th width="45px" bgcolor="aqua">10</th>
+                <th width="45px" bgcolor="silver">11</th>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <p>&copy有意义就是好好活，好好活就是做有意义的事情！</p>
+</div>
+</body>
+</html>
