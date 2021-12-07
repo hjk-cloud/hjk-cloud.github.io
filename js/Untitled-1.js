@@ -1,10 +1,10 @@
 //拦截安卓回退按钮
-history.pushState(null, null, location.href);
-window.addEventListener('popstate', function (event) {
-    history.pushState(null, null, location.href);
-    //此处加入回退时你要执行的代码
-    //window.location.href="about:blank";
-});
+// history.pushState(null, null, location.href);
+// window.addEventListener('popstate', function (event) {
+//     history.pushState(null, null, location.href);
+//     //此处加入回退时你要执行的代码
+//     //window.location.href="about:blank";
+// });
 
 
 //变换背景颜色
